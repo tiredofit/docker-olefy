@@ -1,9 +1,9 @@
 # hub.docker.com/r/tiredofit/olefy
 
-[![Build Status](https://img.shields.io/docker/build/tiredofit/traefik.svg)](https://hub.docker.com/r/tiredofit/traefik)
-[![Docker Pulls](https://img.shields.io/docker/pulls/tiredofit/traefik.svg)](https://hub.docker.com/r/tiredofit/traefik)
-[![Docker Stars](https://img.shields.io/docker/stars/tiredofit/traefik.svg)](https://hub.docker.com/r/tiredofit/traefik)
-[![Docker Layers](https://images.microbadger.com/badges/image/tiredofit/traefik.svg)](https://microbadger.com/images/tiredofit/traefik)
+[![Build Status](https://img.shields.io/docker/build/tiredofit/olefy.svg)](https://hub.docker.com/r/tiredofit/olefy)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tiredofit/olefy.svg)](https://hub.docker.com/r/tiredofit/olefy)
+[![Docker Stars](https://img.shields.io/docker/stars/tiredofit/olefy.svg)](https://hub.docker.com/r/tiredofit/olefy)
+[![Docker Layers](https://images.microbadger.com/badges/image/tiredofit/olefy.svg)](https://microbadger.com/images/tiredofit/olefy)
 
 # Introduction
 
