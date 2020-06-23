@@ -9,7 +9,7 @@ services:
       
       - DELETE_TEMP_FILES=TRUE
       - DELETE_TEMP_FILES_FAILED=TRUE
-      - LISTEN_PORT=10055
+      - LISTEN_PORT=1005
       - LOG_LEVEL=INFO
       - MINIMUM_CHARACTER_LENGTH=500
     networks:
