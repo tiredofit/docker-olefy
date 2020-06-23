@@ -23,22 +23,23 @@ RUN set -x && \
                 libressl \
                 python3 \
                 && \
-     \
-     pip install --upgrade \
-                    asyncio \
-                    oletools \
-                    python-magic \
-                    && \
-     \
-     ## Fetch Olefy
-     git clone https://github.com/HeinleinSupport/olefy /usr/src/olefy && \
-     cp /usr/src/olefy/olefy.py /usr/local/bin && \
-     chmod +x /usr/local/bin/olefy.py && \
-     \
-     ## Cleanup
-     apk del .olefy-build-deps && \
-     rm -rf /usr/src/* && \
-     rm -rf /var/cache/apk/*
+    \
+    pip install --upgrade \
+                   asyncio \
+                   oletools \
+                   python-magic \
+                   && \
+    \
+    ## Fetch Olefy
+    git clone https://github.com/HeinleinSupport/olefy /usr/src/olefy && \
+    cp /usr/src/olefy/olefy.py /usr/local/bin && \
+    chmod +x /usr/local/bin/olefy.py && \
+    \
+    ## Cleanup
+    apk del .olefy-build-deps && \
+    rm -rf /usr/src/* && \
+    rm -rf /root/.cache && \
+    rm -rf /var/cache/apk/*
 
 ### Networking Configuration
 EXPOSE 1055 
