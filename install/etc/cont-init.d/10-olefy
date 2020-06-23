@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+
+source /assets/functions/00-container
+prepare_service single
+PROCESS_NAME="olefy"
+
+configure_logging
+create_configuration
+create_tmp_dir
+
+liftoff 

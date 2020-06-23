@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv bash
+
+source /assets/functions/00-container
+prepare_service defaults single
+PROCESS_NAME="olefy"
+
+check_container_initialized
+check_service_initialized init
+liftoff
+
+print_info "Starting Olefy"
+set -a
+source ${CONFIG_PATH}${CONFIG_FILE}
+python3 /usr/local/bin/olefy.py

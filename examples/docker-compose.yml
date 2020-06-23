@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+
+  olefy-app:
+    image: tiredofit/olefy
+    container_name: olefy-app
+    environment:
+      - ZABBIX_HOSTNAME=olefy-app
+      
+      - DELETE_TEMP_FILES=TRUE
+      - DELETE_TEMP_FILES_FAILED=TRUE
+      - LISTEN_PORT=10055
+      - LOG_LEVEL=INFO
+      - MINIMUM_CHARACTER_LENGTH=500
+    networks:
+      - services
+    restart: always
+
+networks:
+  services:
+    external: true
+

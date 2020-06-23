@@ -1,0 +1,57 @@
+#!/usr/bin/with-contenv bash
+
+create_configuration() {
+	if [ "$SETUP_TYPE" = "AUTO" ]; then
+        print_notice "Configuring Olefy"
+		cat << EOF > ${CONFIG_PATH}${CONFIG_FILE}
+## Custom Generated Olefy Configuration! Do not edit, instead set ENV Vars
+## If you want to use your own configuration files set SETUP_TYPE=MANUAL when starting container
+## Last Generated on `date`
+
+OLEFY_BINDADDRESS=${LISTEN_IP}
+OLEFY_BINDPORT=${LISTEN_PORT}
+OLEFY_DEL_TMP=${DELETE_TEMP_FILES}
+OLEFY_DEL_TMP_FAILED=${DELETE_TEMP_FILES_FAILED}
+OLEFY_LOGLVL=${LOG_LEVEL}
+OLEFY_MINLENGTH=${MINIMUM_CHARACTER_LENGTH}
+OLEFY_OLEVBA_PATH=/usr/bin/olevba3
+OLEFY_PYTHON_PATH=/usr/bin/python3
+OLEFY_TMPDIR=${TMP_PATH}
+EOF
+	fi
+}
+
+create_tmp_dir() {
+    mkdir -p ${TMP_PATH}
+}
+
+configure_logging() {
+    if [ "$SETUP_TYPE" = "AUTO" ]; then
+        print_debug "Configuring Logging"
+        if [ "$LOG_TYPE" = "FILE" ] || [ "$LOG_TYPE" = "file" ] ; then
+            mkdir -p ${LOG_PATH}
+            sed -i "s#<LOG_LOCATION>#${LOG_PATH}#g" /etc/logrotate.d/olefy
+            sed -i "s#<LOG_FILE>#${LOG_FILE}#g" /etc/logrotate.d/olefy
+            logfile=${LOG_PATH}${LOG_FILE}
+        else
+            rm -rf /etc/logrotate.d/olefy
+            logfile=""
+        fi
+
+        ### Translate Logging
+        case "$LOG_LEVEL" in
+            "INFO" | "info" | "30" )
+                LOG_LEVEL=30
+            ;;
+            "DEBUG" | "debug" | "10" )
+                LOG_LEVEL=3
+            ;;
+            "ERROR" | "error" | "40" )
+                LOG_LEVEL=40
+            ;;
+            "CRITICAL" | "critical" | "50" )
+                LOG_LEVEL=50
+            ;;
+        esac
+    fi
+}
