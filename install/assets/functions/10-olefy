@@ -40,17 +40,20 @@ configure_logging() {
 
         ### Translate Logging
         case "$LOG_LEVEL" in
-            "INFO" | "info" | "30" )
-                LOG_LEVEL=30
+            "CRITICAL" | "critical" | "50" )
+                LOG_LEVEL=50
             ;;
             "DEBUG" | "debug" | "10" )
-                LOG_LEVEL=3
+                LOG_LEVEL=10
             ;;
             "ERROR" | "error" | "40" )
                 LOG_LEVEL=40
             ;;
-            "CRITICAL" | "critical" | "50" )
-                LOG_LEVEL=50
+            "INFO" | "info" | "20" )
+                LOG_LEVEL=20
+            ;;
+            "WARN" | "warn" | "30" )
+                LOG_LEVEL=30
             ;;
         esac
     fi
