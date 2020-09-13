@@ -1,3 +1,9 @@
+## 1.0.3 2020-09-13 <dave at tiredofit dot ca>
+
+   ### Added
+      - Add python3-setuptools
+
+
 ## 1.0.2 2020-09-13 <dave at tiredofit dot ca>
 
    ### Changed

@@ -22,6 +22,7 @@ RUN set -x && \
                 libmagic \
                 libressl \
                 python3 \
+                py3-setuptools \
                 && \
     \
     pip install --upgrade \
@@ -42,7 +43,7 @@ RUN set -x && \
     rm -rf /var/cache/apk/*
 
 ### Networking Configuration
-EXPOSE 1055 
+EXPOSE 1055
 
 ### Add Files
 ADD install /
