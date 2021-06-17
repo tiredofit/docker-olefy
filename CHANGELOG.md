@@ -1,3 +1,10 @@
+## 1.0.5 2021-06-17 <dave at tiredofit dot ca>
+
+   ### Added
+      - Alpine 3.14 Base
+      - Replace libressl with openssl
+
+
 ## 1.0.4 2021-01-14 <dave at tiredofit dot ca>
 
    ### Changed

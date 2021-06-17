@@ -1,5 +1,5 @@
-FROM tiredofit/alpine:3.13
-LABEL maintainer="Dave Conroy (dave at tiredofit dot ca)"
+FROM tiredofit/alpine:3.14
+LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ### Disable Features from Base Image
 ENV ENABLE_SMTP=FALSE
@@ -12,15 +12,15 @@ RUN set -x && \
                 gcc \
                 git \
                 libffi-dev \
-                libressl-dev \
                 musl-dev \
+                openssl-dev \
                 python3-dev \
                 py-pip \
                 && \
     \
     apk add -t .olefy-run-deps \
                 libmagic \
-                libressl \
+                openssl \
                 python3 \
                 py3-setuptools \
                 && \

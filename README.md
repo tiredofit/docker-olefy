@@ -1,11 +1,10 @@
-# hub.docker.com/r/tiredofit/olefy
+# github.com/tiredofit/docker-olefy
 
-[![Build Status](https://img.shields.io/docker/build/tiredofit/olefy.svg)](https://hub.docker.com/r/tiredofit/olefy)
 [![Docker Pulls](https://img.shields.io/docker/pulls/tiredofit/olefy.svg)](https://hub.docker.com/r/tiredofit/olefy)
 [![Docker Stars](https://img.shields.io/docker/stars/tiredofit/olefy.svg)](https://hub.docker.com/r/tiredofit/olefy)
 [![Docker Layers](https://images.microbadger.com/badges/image/tiredofit/olefy.svg)](https://microbadger.com/images/tiredofit/olefy)
 
-## Introduction
+## About
 
 Dockerfile to build an [Olefy](https://github.com/HeinleinSupport/olefy) container image for utilizing OLE Tools over a network socket.
 
@@ -15,7 +14,7 @@ Dockerfile to build an [Olefy](https://github.com/HeinleinSupport/olefy) contain
 
 [Changelog](CHANGELOG.md)
 
-## Authors
+## Maintainer
 
 - [Dave Conroy](https://github.com/tiredofit/)
 
@@ -33,7 +32,7 @@ Dockerfile to build an [Olefy](https://github.com/HeinleinSupport/olefy) contain
     - [Shell Access](#shell-access)
    - [References](#references)
 
-## Prerequisites
+## Prerequisites and Assumptions
 
 This image doesn't do much on it's own - You'd probably want to use a [rSpamd](https://hub.docker.com/r/tiredofit/rspamd) to utilize it.
 
@@ -59,7 +58,7 @@ The following image tags are available:
 
 ## Configuration
 
-### Data-Volumes
+### Persistent Storage
 
 No files are required for persistent storage.
 
