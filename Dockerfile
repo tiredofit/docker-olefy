@@ -2,13 +2,14 @@ FROM tiredofit/alpine:3.14
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ### Disable Features from Base Image
-ENV ENABLE_SMTP=FALSE
+ENV CONTAINER_ENABLE_MESSAGING=FALSE
 
 ### Install Dependencies
 RUN set -x && \
     apk update && \
     apk upgrade && \
     apk add -t .olefy-build-deps \
+                cargo \
                 gcc \
                 git \
                 libffi-dev \
@@ -16,20 +17,24 @@ RUN set -x && \
                 openssl-dev \
                 python3-dev \
                 py-pip \
+                py3-wheel \
+                py3-setuptools \
                 && \
     \
     apk add -t .olefy-run-deps \
                 libmagic \
                 openssl \
                 python3 \
-                py3-setuptools \
                 && \
     \
     pip install --upgrade \
                    asyncio \
-                   oletools \
+                   #oletools \
                    python-magic \
                    && \
+    \
+    ## Fetch Patched OLETools
+    pip3 install https://github.com/HeinleinSupport/oletools/archive/master.zip && \
     \
     ## Fetch Olefy
     git clone https://github.com/HeinleinSupport/olefy /usr/src/olefy && \

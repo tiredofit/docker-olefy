@@ -1,8 +1,14 @@
+## 1.1.0 2021-07-29 <dave at tiredofit dot ca>
+
+   ### Added
+      - Switch to HeinleinSupport/oletools fork to be more compatible with RSPAMD
+      - Quiet down Olefy and force output to logs
+
+
 ## 1.0.5 2021-06-17 <dave at tiredofit dot ca>
 
    ### Added
       - Alpine 3.14 Base
-      - Replace libressl with openssl
 
 
 ## 1.0.4 2021-01-14 <dave at tiredofit dot ca>
