@@ -45,6 +45,7 @@ RUN set -x && \
     apk del .olefy-build-deps && \
     rm -rf /usr/src/* && \
     rm -rf /root/.cache && \
+    rm -rf /root/.cargo && \
     rm -rf /var/cache/apk/*
 
 ### Networking Configuration

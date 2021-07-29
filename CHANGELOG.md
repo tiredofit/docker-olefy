@@ -1,3 +1,9 @@
+## 1.1.1 2021-07-29 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Remove rust build cache
+
+
 ## 1.1.0 2021-07-29 <dave at tiredofit dot ca>
 
    ### Added
