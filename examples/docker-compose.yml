@@ -5,7 +5,7 @@ services:
     image: tiredofit/olefy
     container_name: olefy-app
     environment:
-      - ZABBIX_HOSTNAME=olefy-app
+      - CONTAINER_NAME=olefy-app
       
       - DELETE_TEMP_FILES=TRUE
       - DELETE_TEMP_FILES_FAILED=TRUE

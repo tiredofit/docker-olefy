@@ -1,3 +1,9 @@
+## 1.1.2 2021-09-04 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Change the way that log rotation is configured for future log parsing
+
+
 ## 1.1.1 2021-07-29 <dave at tiredofit dot ca>
 
    ### Changed
