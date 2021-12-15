@@ -2,10 +2,12 @@
 
 source /assets/functions/00-container
 prepare_service single
+prepare_service 03-monitoring
 PROCESS_NAME="olefy"
 
+configure_monitoring
 configure_logging
 create_configuration
 create_tmp_dir
 
-liftoff 
+liftoff

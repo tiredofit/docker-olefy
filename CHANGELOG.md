@@ -1,3 +1,9 @@
+## 1.1.4 2021-12-15 <dave at tiredofit dot ca>
+
+   ### Added
+      - Add auto register support for Zabbix Agent/monitoring
+
+
 ## 1.1.3 2021-11-24 <dave at tiredofit dot ca>
 
    ### Added
