@@ -2,7 +2,9 @@ FROM docker.io/tiredofit/alpine:3.15
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ### Disable Features from Base Image
-ENV CONTAINER_ENABLE_MESSAGING=FALSE
+ENV CONTAINER_ENABLE_MESSAGING=FALSE \
+    IMAGE_NAME="tiredofit/olefy" \
+    IMAGE_REPO_URL="https://github.com/tiredofit/docker-olefy/"
 
 ### Install Dependencies
 RUN set -x && \
