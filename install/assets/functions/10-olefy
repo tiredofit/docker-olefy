@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bash
+#!/command/with-contenv bash
 
 create_configuration() {
 	if [ "$SETUP_TYPE" = "AUTO" ]; then
@@ -59,11 +59,5 @@ configure_logging() {
 }
 
 configure_monitoring() {
-    if var_true "${CONTAINER_ENABLE_MONITORING}" && [ "${CONTAINER_MONITORING_BACKEND,,}" = "zabbix" ]; then
-          cat <<EOF > "${ZABBIX_CONFIG_PATH}"/"${ZABBIX_CONFIG_FILE}.d"/tiredofit-olefy.conf
-# Zabbix Fluentbit Configuration - Automatically generated based on container startup options
-# Find Companion Zabbix Server Templates at https://github.com/tiredofit/docker-alpine or https://github.com/tiredofit/docker-debian
-# Autoregister=olefy
-EOF
-    fi
+    create_zabbix olefy
 }
