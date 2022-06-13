@@ -31,12 +31,9 @@ RUN set -x && \
     \
     pip install --upgrade \
                    asyncio \
-                   #oletools \
+                   oletools \
                    python-magic \
                    && \
-    \
-    ## Fetch Patched OLETools
-    pip3 install https://github.com/HeinleinSupport/oletools/archive/master.zip && \
     \
     ## Fetch Olefy
     git clone https://github.com/HeinleinSupport/olefy /usr/src/olefy && \

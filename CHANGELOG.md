@@ -1,3 +1,9 @@
+## 1.1.8 2022-06-13 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Stop using patched oletools as the original olefy repo is not using it anymore
+
+
 ## 1.1.7 2022-05-24 <dave at tiredofit dot ca>
 
    ### Added
