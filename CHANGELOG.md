@@ -1,3 +1,9 @@
+## 1.1.9 2022-06-15 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Change path to where /usr/bin/olevba resides
+
+
 ## 1.1.8 2022-06-13 <dave at tiredofit dot ca>
 
    ### Changed
