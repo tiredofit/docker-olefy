@@ -11,4 +11,4 @@ liftoff
 print_start "Starting Olefy"
 set -a
 source ${CONFIG_PATH}${CONFIG_FILE}
-silent python3 /usr/local/bin/olefy.py
+silent exec python3 /usr/local/bin/olefy.py

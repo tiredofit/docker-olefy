@@ -1,3 +1,9 @@
+## 1.1.10 2022-08-17 <dave at tiredofit dot ca>
+
+   ### Changed
+      - Switch to using exec to launch process
+
+
 ## 1.1.9 2022-06-15 <dave at tiredofit dot ca>
 
    ### Changed
