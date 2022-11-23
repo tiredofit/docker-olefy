@@ -2,7 +2,6 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/tiredofit/olefy.svg)](https://hub.docker.com/r/tiredofit/olefy)
 [![Docker Stars](https://img.shields.io/docker/stars/tiredofit/olefy.svg)](https://hub.docker.com/r/tiredofit/olefy)
-[![Docker Layers](https://images.microbadger.com/badges/image/tiredofit/olefy.svg)](https://microbadger.com/images/tiredofit/olefy)
 
 ## About
 
