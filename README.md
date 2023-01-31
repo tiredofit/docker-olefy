@@ -37,12 +37,18 @@ This image doesn't do much on it's own - You'd probably want to use a [rSpamd](h
 
 ## Installation
 
-Automated builds of the image are available on [Docker Hub](https://hub.docker.com/r/tiredofit/olefy) and is the recommended method of installation.
+Automated builds of the image are available on [Docker Hub](https://hub.docker.com/r/tiredofit/olefy)
 
 
 ```bash
-docker pull tiredofit/olefy:(imagetag)
+docker pull docker.io/tiredofdit/olefy:(imagetag)
 ```
+
+Builds of the image are also available on the [Github Container Registry](https://github.com/tiredofit/docker-olefy/pkgs/container/docker-olefy) 
+ 
+```
+docker pull ghcr.io/tiredofit/docker-olefy:(imagetag)
+``` 
 
 The following image tags are available:
 * `latest` - Most recent release of olefy w/ Alpine Linux
