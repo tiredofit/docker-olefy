@@ -1,3 +1,10 @@
+## 1.2.0 2023-05-10 <dave at tiredofit dot ca>
+
+   ### Added
+      - Modernize Dockerfile
+      - Alpine 3.18 base
+
+
 ## 1.1.11 2022-11-23 <dave at tiredofit dot ca>
 
    ### Added

@@ -1,16 +1,18 @@
-FROM docker.io/tiredofit/alpine:3.17
+ARG DISTRO=alpine
+ARG DISTRO_VARIANT=3.18
+
+FROM docker.io/tiredofit/${DISTRO}:${DISTRO_VARIANT}
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
-### Disable Features from Base Image
 ENV CONTAINER_ENABLE_MESSAGING=FALSE \
     IMAGE_NAME="tiredofit/olefy" \
     IMAGE_REPO_URL="https://github.com/tiredofit/docker-olefy/"
 
-### Install Dependencies
-RUN set -x && \
-    apk update && \
-    apk upgrade && \
-    apk add -t .olefy-build-deps \
+RUN source /assets/functions/00-container && \
+    set -x && \
+    package update && \
+    package upgrade && \
+    package install .olefy-build-deps \
                 cargo \
                 gcc \
                 git \
@@ -23,7 +25,7 @@ RUN set -x && \
                 py3-setuptools \
                 && \
     \
-    apk add -t .olefy-run-deps \
+    package install .olefy-run-deps \
                 libmagic \
                 openssl \
                 python3 \
@@ -35,20 +37,15 @@ RUN set -x && \
                    python-magic \
                    && \
     \
-    ## Fetch Olefy
-    git clone https://github.com/HeinleinSupport/olefy /usr/src/olefy && \
+    clone_git_repo https://github.com/HeinleinSupport/olefy && \
     cp /usr/src/olefy/olefy.py /usr/local/bin && \
     chmod +x /usr/local/bin/olefy.py && \
     \
-    ## Cleanup
-    apk del .olefy-build-deps && \
-    rm -rf /usr/src/* && \
-    rm -rf /root/.cache && \
-    rm -rf /root/.cargo && \
-    rm -rf /var/cache/apk/*
+    package remove olefy-build-deps && \
+    rm -rf /usr/src/* \
+           /root/.cache \
+           /root/.cargo
 
-### Networking Configuration
 EXPOSE 1055
 
-### Add Files
 COPY install /
