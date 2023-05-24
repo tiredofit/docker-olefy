@@ -41,7 +41,7 @@ Automated builds of the image are available on [Docker Hub](https://hub.docker.c
 
 
 ```bash
-docker pull docker.io/tiredofdit/olefy:(imagetag)
+docker pull docker.io/tiredofit/olefy:(imagetag)
 ```
 
 Builds of the image are also available on the [Github Container Registry](https://github.com/tiredofit/docker-olefy/pkgs/container/docker-olefy) 
