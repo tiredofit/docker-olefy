@@ -31,7 +31,7 @@ RUN source /assets/functions/00-container && \
                 python3 \
                 && \
     \
-    pip install --upgrade \
+    pip install --break-system-packages --upgrade \
                    asyncio \
                    oletools \
                    python-magic \
