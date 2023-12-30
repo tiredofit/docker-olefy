@@ -4,7 +4,9 @@ ARG DISTRO_VARIANT=3.19
 FROM docker.io/tiredofit/${DISTRO}:${DISTRO_VARIANT}
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
-ENV CONTAINER_ENABLE_MESSAGING=FALSE \
+ENV OLEFY_VERSION=f8aac6cc55283886d153e89c8f27fae66b1c24e2 \
+    OLEFY_REPO_URL=https://github.com/HeinleinSupport/olefy \
+    CONTAINER_ENABLE_MESSAGING=FALSE \
     IMAGE_NAME="tiredofit/olefy" \
     IMAGE_REPO_URL="https://github.com/tiredofit/docker-olefy/"
 
@@ -29,15 +31,12 @@ RUN source /assets/functions/00-container && \
                 libmagic \
                 openssl \
                 python3 \
+                py3-async_generator \
+                py3-magic \
+                py3-oletools \
                 && \
     \
-    pip install --break-system-packages --upgrade \
-                   asyncio \
-                   oletools \
-                   python-magic \
-                   && \
-    \
-    clone_git_repo https://github.com/HeinleinSupport/olefy && \
+    clone_git_repo ${OLEFY_REPO_URL} ${OLEFY_VERSION} && \
     cp /usr/src/olefy/olefy.py /usr/local/bin && \
     chmod +x /usr/local/bin/olefy.py && \
     \

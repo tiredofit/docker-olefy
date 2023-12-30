@@ -1,3 +1,10 @@
+## 1.3.0 2023-12-30 <dave at tiredofit dot ca>
+
+   ### Added
+      - Use alpine packages for python dependencies
+      - Pin to olefy f8aac6cc55283886d153e89c8f27fae66b1c24e2 to fix indentation error
+
+
 ## 1.2.2 2023-12-08 <dave at tiredofit dot ca>
 
    ### Changed
